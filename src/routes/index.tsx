@@ -1,26 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Download } from "lucide-react";
 import pulseDemo from "@/assets/pulse-demo.png.asset.json";
 import infinityDemo from "@/assets/infinity-store-demo.png.asset.json";
 
 const GITHUB_URL = "https://github.com/rahilabsc24-ux";
 const LINKEDIN_URL = "https://www.linkedin.com/in/rahila-shahnas24090612";
+const PORTFOLIO_DOWNLOAD_URL = "/downloads/index.html";
 
 const skillGroups = [
   {
-    title: "Frontend",
-    skills: ["React.js", "JavaScript", "HTML / CSS", "Bootstrap"],
+    title: "Frontend Development",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Bootstrap", "Responsive Web Design"],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "API Integration"],
+    title: "Backend Development",
+    skills: ["Node.js", "Express.js", "RESTful APIs", "CRUD Operations"],
   },
   {
-    title: "Languages",
-    skills: ["Java", "Python", "C / C++"],
+    title: "Database Management",
+    skills: ["MongoDB", "MySQL"],
   },
   {
-    title: "Databases & Tools",
-    skills: ["MySQL", "MongoDB", "Git / GitHub", "VS Code"],
+    title: "Authentication & Security",
+    skills: ["JWT", "Authentication", "Authorization"],
+  },
+  {
+    title: "Programming Languages",
+    skills: ["Java", "C", "C++", "Python"],
+  },
+  {
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "VS Code", "Postman", "npm"],
+  },
+  {
+    title: "Core Concepts",
+    skills: ["API Integration", "JSON", "Client–Server Architecture", "Frontend–Backend Integration"],
   },
 ];
 
@@ -97,6 +111,15 @@ function Nav() {
         >
           Hire me
         </a>
+        <a
+          href={PORTFOLIO_DOWNLOAD_URL}
+          download="index.html"
+          aria-label="Download portfolio as index.html"
+          title="Download portfolio"
+          className="hidden h-10 w-10 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary md:flex"
+        >
+          <Download aria-hidden="true" className="h-4 w-4" />
+        </a>
       </div>
     </nav>
   );
@@ -128,6 +151,14 @@ function Hero() {
         >
           Get in touch
         </a>
+        <a
+          href={PORTFOLIO_DOWNLOAD_URL}
+          download="index.html"
+          className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-4 font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+        >
+          <Download aria-hidden="true" className="h-5 w-5" />
+          Download portfolio
+        </a>
         <div className="flex items-center gap-4 px-6">
           <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
             GitHub
@@ -148,7 +179,7 @@ function Skills() {
       <h2 className="mb-12 text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground">
         Technical Skills
       </h2>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group) => (
           <div key={group.title} className="rounded-2xl border border-border bg-card p-6">
             <h3 className="mb-4 font-heading font-bold text-foreground">{group.title}</h3>
@@ -324,7 +355,7 @@ function Experience() {
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-foreground/80">MongoDB: From Zero to CRUD</span>
-                <span className="text-muted-foreground">Certification</span>
+                <span className="text-muted-foreground">HCL GUVI</span>
               </div>
             </div>
           </div>
