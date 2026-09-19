@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import pulseDemo from "@/assets/pulse-demo.png.asset.json";
 import infinityDemo from "@/assets/infinity-store-demo.png.asset.json";
+import aiCareerDemo from "@/assets/ai-career-path-demo.png.asset.json";
+import resume from "@/assets/rahila-shahnas-resume.pdf.asset.json";
 
 const GITHUB_URL = "https://github.com/rahilabsc24-ux";
 const LINKEDIN_URL = "https://www.linkedin.com/in/rahila-shahnas24090612";
-const PORTFOLIO_DOWNLOAD_URL = "/downloads/index.html";
+const RESUME_DOWNLOAD_URL = resume.url;
 
 const skillGroups = [
   {
@@ -61,7 +63,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Rahila Shahnas, a fresher full stack developer in Tamil Nadu. Featured projects: Pulse real-time chat app and Infinity Store e-commerce platform.",
+          "Portfolio of Rahila Shahnas, a fresher full stack developer in Tamil Nadu. Featured projects include Pulse, Infinity Store and an AI-powered career guidance platform.",
       },
       { property: "og:title", content: "Rahila Shahnas | Full Stack Developer Portfolio" },
       {
@@ -112,10 +114,10 @@ function Nav() {
           Hire me
         </a>
         <a
-          href={PORTFOLIO_DOWNLOAD_URL}
-          download="index.html"
-          aria-label="Download portfolio as index.html"
-          title="Download portfolio"
+          href={RESUME_DOWNLOAD_URL}
+          download="Rahila_Shahnas_Resume.pdf"
+          aria-label="Download Rahila Shahnas résumé"
+          title="Download résumé"
           className="hidden h-10 w-10 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary md:flex"
         >
           <Download aria-hidden="true" className="h-4 w-4" />
@@ -152,12 +154,12 @@ function Hero() {
           Get in touch
         </a>
         <a
-          href={PORTFOLIO_DOWNLOAD_URL}
-          download="index.html"
+          href={RESUME_DOWNLOAD_URL}
+          download="Rahila_Shahnas_Resume.pdf"
           className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-4 font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
         >
           <Download aria-hidden="true" className="h-5 w-5" />
-          Download portfolio
+          Download résumé
         </a>
         <div className="flex items-center gap-4 px-6">
           <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
@@ -247,6 +249,14 @@ function Projects() {
           >
             View GitHub Project &rarr;
           </a>
+          <a
+            href="https://connectsphere-joy.lovable.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-6 inline-flex items-center gap-2 font-bold text-foreground hover:text-primary"
+          >
+            Live Demo &rarr;
+          </a>
         </div>
         <div className="order-1 overflow-hidden rounded-2xl border border-border bg-card md:order-2">
           <img
@@ -298,6 +308,60 @@ function Projects() {
           >
             Explore Repository &rarr;
           </a>
+          <a
+            href="https://infinity-store24.lovable.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-6 inline-flex items-center gap-2 font-bold text-foreground hover:text-gold"
+          >
+            Live Demo &rarr;
+          </a>
+        </div>
+      </article>
+
+      <article className="group grid items-center gap-12 md:grid-cols-2">
+        <div className="order-2 md:order-1">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded bg-secondary font-heading font-bold text-primary">
+              AI
+            </div>
+            <span className="font-heading text-2xl font-bold text-foreground">AI Career Path</span>
+          </div>
+          <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
+            An AI-powered career guidance platform that generates personalized career paths based
+            on users&apos; education, skills, interests and career goals.
+          </p>
+          <ul className="mb-8 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
+            <li>Implemented skill-gap analysis, technology recommendations, project suggestions and structured learning roadmaps.</li>
+            <li>Designed a responsive, user-friendly interface with React.js and JavaScript.</li>
+            <li>Integrated backend services and MongoDB for user profiles, career data and personalized recommendations.</li>
+          </ul>
+          <div className="mb-8 flex flex-wrap gap-3">
+            {["React.js", "JavaScript", "Node.js", "MongoDB", "REST API", "AI"].map((tech) => (
+              <span
+                key={tech}
+                className="rounded-md border border-border bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-foreground/80"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <a
+            href="https://career-pathfinder-ai-6.lovable.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 font-bold text-primary hover:underline"
+          >
+            View Live Demo &rarr;
+          </a>
+        </div>
+        <div className="order-1 overflow-hidden rounded-2xl border border-border bg-card md:order-2">
+          <img
+            src={aiCareerDemo.url}
+            alt="AI Career Path platform showing a personalized career roadmap interface"
+            className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            loading="lazy"
+          />
         </div>
       </article>
     </section>
@@ -315,17 +379,21 @@ function Experience() {
           <div className="relative">
             <div className="absolute -left-[37px] top-0 h-4 w-4 rounded-full border-2 border-primary bg-background"></div>
             <h4 className="font-heading text-lg font-bold text-foreground">
-              Vebbox Software Solution
+              Full Stack Developer Intern
             </h4>
             <p className="mb-4 text-sm font-medium text-primary">
-              Full Stack Developer Intern · Nov 2025 – Dec 2025
+              Vebbox Software Solution, Kumbakonam · Nov 24, 2025 – Dec 16, 2025
             </p>
             <ul className="list-disc space-y-2 pl-4 text-sm text-muted-foreground">
-              <li>Completed a 21-day internship focused on full stack web development.</li>
-              <li>Gained practical experience in frontend and backend development.</li>
-              <li>Worked with web technologies to understand application development workflows.</li>
-              <li>Built responsive, user-friendly web applications.</li>
+              <li>Completed a 21-day Full Stack Web Development internship with hands-on experience in frontend and backend development.</li>
+              <li>Developed a responsive corporate company homepage featuring navigation, company overview, services and contact sections.</li>
+              <li>Implemented interactive and user-friendly web pages using HTML5, CSS3, JavaScript, Bootstrap and React.js.</li>
+              <li>Integrated MySQL for data storage and management within the web application.</li>
+              <li>Applied responsive design, debugging, version control and frontend-backend integration practices to build functional web applications.</li>
             </ul>
+            <p className="mt-5 text-sm font-medium text-foreground/80">
+              Tech Stack: HTML5, CSS3, JavaScript, Bootstrap, React.js, MySQL, GitHub
+            </p>
           </div>
         </div>
       </div>
