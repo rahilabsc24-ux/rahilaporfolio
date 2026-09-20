@@ -6,4 +6,4 @@
 - [x] Add AI Career Path with its uploaded demo image, project details, and live demo.
 - [x] Add live demos for Pulse and Infinity Store.
 - [x] Replace the internship content with the provided dates, responsibilities, and tech stack.
-- [ ] Verify the updated portfolio and résumé download.
+- [x] Verify the updated portfolio and résumé download.
