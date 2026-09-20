@@ -156,7 +156,7 @@ function Hero() {
         <a
           href={RESUME_DOWNLOAD_URL}
           download="Rahila_Shahnas_Resume.pdf"
-          className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-4 font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+          className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-4 font-normal text-foreground transition-colors hover:border-primary hover:text-primary"
         >
           <Download aria-hidden="true" className="h-5 w-5" />
           Download résumé
@@ -327,15 +327,13 @@ function Projects() {
             </div>
             <span className="font-heading text-2xl font-bold text-foreground">AI Career Path</span>
           </div>
-          <p className="mb-5 text-lg leading-relaxed text-muted-foreground">
-            An AI-powered career guidance platform that generates personalized career paths based
-            on users&apos; education, skills, interests and career goals.
+          <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
+            Developed CareerPath AI, a full-stack career guidance platform using React.js, Node.js,
+            Express.js and MongoDB. Created personalized career roadmaps based on users&apos;
+            skills, interests and career goals, with skill-gap analysis and project
+            recommendations. Implemented JWT authentication, progress tracking, career exploration
+            and an AI career assistant.
           </p>
-          <ul className="mb-8 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
-            <li>Implemented skill-gap analysis, technology recommendations, project suggestions and structured learning roadmaps.</li>
-            <li>Designed a responsive, user-friendly interface with React.js and JavaScript.</li>
-            <li>Integrated backend services and MongoDB for user profiles, career data and personalized recommendations.</li>
-          </ul>
           <div className="mb-8 flex flex-wrap gap-3">
             {["React.js", "JavaScript", "Node.js", "MongoDB", "REST API", "AI"].map((tech) => (
               <span
@@ -347,10 +345,18 @@ function Projects() {
             ))}
           </div>
           <a
-            href="https://career-pathfinder-ai-6.lovable.app/"
+            href="https://github.com/rahilabsc24-ux/AI-Career-Path"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 font-bold text-primary hover:underline"
+          >
+            View GitHub Project &rarr;
+          </a>
+          <a
+            href="https://career-pathfinder-ai-6.lovable.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-6 inline-flex items-center gap-2 font-bold text-foreground hover:text-primary"
           >
             View Live Demo &rarr;
           </a>
@@ -421,6 +427,11 @@ function Experience() {
                 <span className="text-foreground/80">Full Stack Development</span>
                 <span className="text-muted-foreground">HCL GUVI</span>
               </div>
+              <ul className="mt-2 list-disc space-y-1 pl-4 text-xs leading-relaxed text-muted-foreground">
+                <li>Developed responsive web applications using HTML, CSS, JavaScript, and React.js.</li>
+                <li>Worked with MongoDB, REST APIs, CRUD operations, and frontend–backend integration.</li>
+                <li>Used Git and GitHub for version control and project management.</li>
+              </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-foreground/80">MongoDB: From Zero to CRUD</span>
                 <span className="text-muted-foreground">HCL GUVI</span>
